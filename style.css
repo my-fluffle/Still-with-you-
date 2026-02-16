@@ -1,0 +1,81 @@
+
+body {
+  margin: 0;
+  padding: 1em;
+  background-color: #fff0f8;
+  font-family: 'Segoe UI', sans-serif;
+  color: #444;
+  text-align: center;
+}
+h1 {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+.controls {
+  margin-bottom: 1em;
+}
+select {
+  font-size: 1em;
+  padding: 0.4em;
+  border-radius: 10px;
+  margin: 0 0.5em;
+  border: 1px solid #ccc;
+  background-color: #fef6fb;
+  color: #bb77cc;
+}
+table {
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 420px;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #f3d3e3;
+  width: 14.28%;
+  height: 44px;
+  font-size: 0.9em;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+th {
+  background-color: #ffe6f2;
+}
+td:hover {
+  background-color: #f9d6ec;
+}
+footer {
+  margin-top: 1.5em;
+  font-size: 0.9em;
+  color: #999;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background-color: #fffafc;
+  margin: 20% auto;
+  padding: 20px;
+  border-radius: 14px;
+  width: 80%;
+  max-width: 400px;
+}
+.close {
+  color: #999;
+  float: right;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+.emoji {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  font-size: 0.85em;
+}
