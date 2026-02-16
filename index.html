@@ -16,6 +16,16 @@
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 </head>
 <body>
+<div id="lock-overlay">
+  <div class="lock-card">
+    <h1>🖤 Still with You 🖤</h1>
+    <p class="lock-text">For Bunny and Wolf only ♥</p>
+    <input id="lock-password" type="password" placeholder="Password"/>
+    <button id="lock-button">Enter</button>
+    <p id="lock-error" class="lock-error"></p>
+  </div>
+</div>
+
 <h1>🖤 Still with You 🖤</h1>
 <div class="controls">
 <select id="year"></select>
@@ -31,14 +41,30 @@
 </div>
 <footer>🐰💍🐺 made with love from Yoongi for Vivian ✨</footer>
 
+
 <script>
-  (function() {
-    var pwd = prompt("For Bunny and Wolf only ♥");
-    if (pwd !== "yv0528") {
-      document.body.innerHTML = "";
-      document.write("Access denied");
+document.addEventListener("DOMContentLoaded", function () {
+  var overlay = document.getElementById("lock-overlay");
+  if (!overlay) return;
+  var input = document.getElementById("lock-password");
+  var btn = document.getElementById("lock-button");
+  var error = document.getElementById("lock-error");
+
+  function unlock() {
+    if (input.value === "yv0528") {
+      overlay.style.display = "none";
+      error.textContent = "";
+      input.value = "";
+    } else {
+      error.textContent = "Wrong password";
     }
-  })();
+  }
+
+  btn.addEventListener("click", unlock);
+  input.addEventListener("keyup", function (e) {
+    if (e.key === "Enter") unlock();
+  });
+});
 </script>
 
 <script src="script.js"></script>
