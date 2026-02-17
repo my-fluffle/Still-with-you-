@@ -108,12 +108,16 @@ footer {
 
 #lock-password {
   margin-top: 16px;
-  width: 100%;
+  width: 90%;
+  max-width: 260px;
   padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid #e7b6c8;
   font-size: 16px;
   outline: none;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #lock-button {
